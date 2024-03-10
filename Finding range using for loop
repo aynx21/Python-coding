@@ -1,0 +1,11 @@
+#finding range using for loop
+
+for step in range (10,100,10) :
+    print(step)
+
+print('another list to print in range')
+
+wlist =[22,44,66,77,88,99,00]
+
+for lst in range(len(wlist)):
+    print(wlist[lst])

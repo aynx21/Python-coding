@@ -1,0 +1,17 @@
+#lists
+
+list = [ 'http', 'Lums', 'nust', 'Aku']
+print( list )
+
+stud_id = {
+    ' Ayan ': 22,
+    ' Bushra ': 23,
+    ' Muskaan ': 37,
+    ' irtiza ': 69,
+}
+print(stud_id)
+
+#slicing--------- spliting / differenciating
+
+list_2 = { ' pftp', 'aku', 'lums', 'iba' }
+print(list_2)

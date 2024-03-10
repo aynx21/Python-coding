@@ -1,0 +1,29 @@
+#a basic user based calculator
+
+print( ' Welcome to your personal calculator ')
+
+
+
+print( ' enter a valid operator such as " + ", " - "," * ", " / " ' )
+
+user_input = input( )
+num1 = float(input( ' Enter your first number '))
+
+num2 = float(input(' Enter your second number '))
+
+if user_input ==  '+' :
+    result = num1 + num2
+    print( num1, " + ", num2, " = ", result)
+
+elif user_input == '-' :
+    result = num1 - num2
+    print(num1, " - ", num2, " = ", result)
+elif user_input == '/' :
+    result = num1 / num2
+    print(num1, " / ", num2, " = ", result)
+elif user_input == '*' :
+    result = num1 * num2
+    print(num1, " * ", num2, " = ", result)
+
+else :
+    print( ' Please correct your input ')

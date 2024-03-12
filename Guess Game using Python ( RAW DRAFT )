@@ -1,0 +1,24 @@
+#guess game in python using while loop
+
+import _random
+import random
+
+guess_num = 14
+
+your_num = int(guess_num * random.random()) + 1
+guess = 0
+
+while guess != your_num :
+    guess = int (input( " Take your Guess :) "))
+    if guess > 0:
+        if guess < your_num:
+            print( " Your Number is too short, Please have another guess :( ")
+        elif guess > your_num:
+            print( " opps!!!! Your Number is too large")
+    else:
+        print( " Have another try ")
+        break
+
+
+else:
+    print(" Wohooo! You made it ")

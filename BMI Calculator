@@ -1,0 +1,20 @@
+import time
+
+print("Hello there!\n ")
+time.sleep(1)
+print("Please continue to use BMI Calculator:)\n")
+time.sleep(1)
+
+#user to enter their weight
+weight = float(input("Please enter your weight in Kilograms:\n"))
+#user to enter height
+height = float(input("Please enter your height in meters:\n"))
+
+#calculating BMI
+
+bmi =weight / (height*height)
+
+#displaying BMI
+
+print("Your BMI is",bmi)
+

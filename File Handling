@@ -1,0 +1,50 @@
+def create_file(filename: str) :
+    try:
+        with open(filename, 'x') as file:
+            print(f'Successfully created the file: {filename}')
+    except FileExistsError:
+        print(f'The file already exists: {filename}')
+
+def open_file(filename: str) :
+    try:
+        with open(filename, 'r') as file:
+            print(f'Contents of the file: {filename}')
+            print(file.read())
+    except FileNotFoundError:
+        print(f'The file does not exist: {filename}')
+
+def write_file(filename: str) :
+    try:
+        with open(filename, 'w') as file:
+            file.write('This is a test file.\n')
+            file.write('This is a second line.\n')
+            print(f'Successfully wrote to the file: {filename}')
+    except FileNotFoundError:
+        print(f'The file does not exist: {filename}')
+
+def close_file(filename: str) :
+    try:
+        with open(filename, 'r') as file:
+            print(f'The file: {filename} is currently open.')
+        with open(filename, 'a') as file:
+            file.write('This is a third line.\n')
+            print(f'Successfully appended to the file: {filename}')
+    except FileNotFoundError:
+        print(f'The file does not exist: {filename}')
+
+if __name__ == '__main__':
+    while True:
+        filename = input('Enter the filename: ')
+        operation = input('Enter the operation (create, open, write, close, exit): ')
+        if operation == 'create':
+            create_file(filename)
+        elif operation == 'open':
+            open_file(filename)
+        elif operation == 'write':
+            write_file(filename)
+        elif operation == 'close':
+            close_file(filename)
+        elif operation == 'exit':
+            break
+        else:
+            print('Invalid operation.')

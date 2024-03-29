@@ -1,0 +1,19 @@
+import re
+from collections import Counter
+
+def count_words(filename):
+    try:
+        with open(filename, 'r') as file:
+            content = file.read().lower()
+            words = re.findall(r'\w+', content)
+            word_count = Counter(words)
+            for word, count in word_count.items():
+                print(f'Word: {word}, Count: {count}')
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")
+
+#  path of the text file
+file_path = 'path/to/your/file.txt'
+
+# Calling function
+count_words(file_path)

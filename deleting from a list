@@ -1,0 +1,9 @@
+supplies = ["tent", "sleeping bag", "chai", "Milk", "Jackets", "Cups", "toilet papers"]
+
+supplies.extend(["charger", "Water"])
+supplies.insert(1, "Dish Wash")
+
+supplies.pop(3)
+supplies.pop(3)
+
+print(supplies)
